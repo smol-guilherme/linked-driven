@@ -1,1 +1,0 @@
-SELECT users.name, users.id, c.name city FROM users INNER JOIN cities AS c ON users."cityId" = c.id AND c.name='Rio de Janeiro';

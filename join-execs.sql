@@ -1,0 +1,4 @@
+SELECT users.name, users.id, c.name city FROM users INNER JOIN cities AS c ON users."cityId" = c.id AND c.name='Rio de Janeiro';
+SELECT t.id, t.message, u1.name writer, u2.name recipient FROM testimonials AS t INNER JOIN users AS u1 ON t."writerId"=u1.id INNER JOIN users AS u2 ON t."recipientId"=u2.id;
+SELECT users.id, users.name, c.name course, s.name school, e."endDate" "endDate" FROM users INNER JOIN educations AS e ON status='finished' INNER JOIN courses AS c ON e."courseId"=c.id INNER JOIN schools AS s ON e."schoolId"=s.id WHERE users.id=30;
+SELECT u.id, u.name, r.name "role", c.name company, e."startDate" "startDate" FROM users AS u INNER JOIN experiences AS e ON e."endDate" IS NOT NULL INNER JOIN companies AS c ON e."companyId"=c.id INNER JOIN roles AS r ON e."roleId"=r.id WHERE u.id=50;

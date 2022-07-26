@@ -1,1 +1,0 @@
-SELECT t.id, t.message, u1.name writer, u2.name recipient FROM testimonials AS t INNER JOIN users AS u1 ON t."writerId"=u1.id INNER JOIN users AS u2 ON t."recipientId"=u2.id;
