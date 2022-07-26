@@ -1,0 +1,1 @@
+SELECT u.id, u.name, r.name "role", c.name company, e."startDate" "startDate" FROM users AS u INNER JOIN experiences AS e ON e."endDate" IS NOT NULL INNER JOIN companies AS c ON e."companyId"=c.id INNER JOIN roles AS r ON e."roleId"=r.id WHERE u.id=50;
